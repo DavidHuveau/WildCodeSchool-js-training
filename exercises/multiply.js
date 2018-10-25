@@ -10,6 +10,14 @@
 
 // Your code :
 
+const multiply = (a, b) => {
+    let res = 0
+    for (let index = 1; index < Math.abs(a) + 1; index++) {
+        res += Math.abs(b);
+    }
+    return (a > 0 && b > 0) || (a < 0 && b < 0) ? res : -res;
+}
+
 //* Begin of tests
 const assert = require('assert')
 
