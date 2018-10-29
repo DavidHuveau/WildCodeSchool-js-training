@@ -11,6 +11,31 @@
 
 // Your code :
 
+const calculate = (cpt, sum, inc, limit) => {
+    if (cpt < Math.abs(limit)) {
+        cpt++;
+        sum = sum +  Math.abs(inc);      
+        return calculate(cpt, sum, inc, limit);
+    }
+    else
+        return sum;
+}
+
+const multiply = (a, b) => {
+    let res = 0
+    if (a === 0 || b === 0)
+        return 0
+    
+    res = calculate(0, 0, a, b);
+
+    return (a > 0 && b > 0) || (a < 0 && b < 0) ? res : -res;
+}
+// return (a > 0 && b > 0) || (a < 0 && b < 0) ? res : -res;
+
+
+// console.log(multiply(34, 78))//, 15)
+
+
 //* Begin of tests
 const assert = require('assert')
 

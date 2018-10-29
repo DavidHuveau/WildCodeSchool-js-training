@@ -8,6 +8,13 @@
  */
 
 // Your code :
+class MyClass {
+    get circular() {
+        return this;
+    }
+}
+
+const circular = new MyClass();
 
 //* Begin of tests
 const assert = require('assert')
